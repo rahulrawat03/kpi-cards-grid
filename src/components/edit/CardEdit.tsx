@@ -4,14 +4,14 @@ import { CardEditCta } from "./CardEditCta";
 import { HttpMethod, useApiCall } from "../../hooks";
 import { MetricResponse, SegmentResponse } from "../types";
 import { METRICS_ENDPOINT, SEGMENTS_ENDPOINT } from "../../constants";
- 
+
 import { Entry } from "../../context";
 import { Loader } from "../Loader";
- 
+
 interface CardEditProps {
   entry: Entry;
 }
- 
+
 export function CardEdit({ entry }: CardEditProps) {
   const [metric, setMetric] = useState<Option>(() =>
     getOption(entry, "metric")
@@ -22,10 +22,7 @@ export function CardEdit({ entry }: CardEditProps) {
   const [segmentValue, setSegmentValue] = useState<Option>(() =>
     getOption(entry, "segmentValue")
   );
- 
-  // Segment Id Options are populated after selection of Segment Key.
-  const [segmentValueOptions, setSegmentValueOptions] = useState<Option[]>([]);
- 
+
   const { loading: loadingMetrics, data: metrics } = useApiCall<MetricResponse>(
     {
       url: METRICS_ENDPOINT,
@@ -37,15 +34,15 @@ export function CardEdit({ entry }: CardEditProps) {
       url: SEGMENTS_ENDPOINT,
       method: HttpMethod.GET,
     });
- 
+
   if (loadingMetrics || loadingSegments) {
     return <Loader />;
   }
- 
+
   if (!(metrics && segments)) {
     return null;
   }
- 
+
   const metricOptions = metrics.data.map((metric) => ({
     label: metric.displayName,
     value: metric.id,
@@ -54,7 +51,14 @@ export function CardEdit({ entry }: CardEditProps) {
     label: segment.displayName,
     value: segment.segmentKey,
   }));
- 
+  const segmentValueOptions = (
+    segments.data.find(({ segmentKey }) => segmentKey === segment.value)
+      ?.values ?? []
+  ).map((segmentValue) => ({
+    label: segmentValue.displayName,
+    value: segmentValue.segmentId,
+  }));
+
   const handleSegmentKeySelection = (option: Option) => {
     // Reset Segment Id if selected segment key is different
     // from the previous one
@@ -65,19 +69,8 @@ export function CardEdit({ entry }: CardEditProps) {
       });
     }
     setSegment(option);
- 
-    const selectedSegment = segments.data.find(
-      (segment) => segment.segmentKey === option.value
-    );
- 
-    setSegmentValueOptions(
-      (selectedSegment?.values ?? []).map((segment) => ({
-        label: segment.displayName,
-        value: segment.segmentId,
-      }))
-    );
   };
- 
+
   return (
     <div className="w-full">
       <Dropdown
@@ -107,7 +100,7 @@ export function CardEdit({ entry }: CardEditProps) {
     </div>
   );
 }
- 
+
 function getOption(
   entry: Entry,
   type: "metric" | "segment" | "segmentValue"
