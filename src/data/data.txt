@@ -1,0 +1,8 @@
+Sample Data for testing.
+ 
+Snapshot sample for payload 
+{
+  "metric": "daily-active-users",
+  "segmentKey": "platform",
+  "segmentId": "ios",
+}

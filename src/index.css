@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .dropdown-option {
+    @apply w-full px-2 py-1 hover:bg-gray-200 outline-none transition-all text-left;
+  }
+}
+
+body {
+  background: #333;
+  margin: 2rem;
+}

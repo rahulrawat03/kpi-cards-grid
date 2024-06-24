@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "segmentKey": "platform",
+      "displayName": "Platform",
+      "values": [
+        {
+          "segmentId": "ios",
+          "displayName": "iOS"
+        },
+        {
+          "segmentId": "android",
+          "displayName": "Android"
+        },
+        {
+          "segmentId": "web",
+          "displayName": "Web"
+        }
+      ]
+    },
+    {
+      "segmentKey": "country",
+      "displayName": "Country",
+      "values": [
+        {
+          "segmentId": "us",
+          "displayName": "United States"
+        },
+        {
+          "segmentId": "uk",
+          "displayName": "United Kingdom"
+        },
+        {
+          "segmentId": "india",
+          "displayName": "India"
+        },
+        {
+          "segmentId": "canada",
+          "displayName": "Canada"
+        },
+        {
+          "segmentId": "australia",
+          "displayName": "Australia"
+        }
+      ]
+    },
+    {
+      "segmentKey": "planType",
+      "displayName": "Plan Type",
+      "values": [
+        {
+          "segmentId": "free",
+          "displayName": "Free"
+        },
+        {
+          "segmentId": "basic",
+          "displayName": "Basic"
+        },
+        {
+          "segmentId": "premium",
+          "displayName": "Premium"
+        },
+        {
+          "segmentId": "enterprise",
+          "displayName": "Enterprise"
+        }
+      ]
+    },
+    {
+      "segmentKey": "acquisitionSource",
+      "displayName": "Acquisition Source",
+      "values": [
+        {
+          "segmentId": "organic",
+          "displayName": "Organic"
+        },
+        {
+          "segmentId": "paid",
+          "displayName": "Paid"
+        },
+        {
+          "segmentId": "referral",
+          "displayName": "Referral"
+        },
+        {
+          "segmentId": "social",
+          "displayName": "Social Media"
+        },
+        {
+          "segmentId": "email",
+          "displayName": "Email Marketing"
+        }
+      ]
+    },
+    {
+      "segmentKey": "deviceType",
+      "displayName": "Device Type",
+      "values": [
+        {
+          "segmentId": "mobile",
+          "displayName": "Mobile"
+        },
+        {
+          "segmentId": "desktop",
+          "displayName": "Desktop"
+        },
+        {
+          "segmentId": "tablet",
+          "displayName": "Tablet"
+        }
+      ]
+    }
+  ]
+}

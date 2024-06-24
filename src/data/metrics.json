@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": "daily-active-users",
+      "displayName": "Daily Active Users (DAU)",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "weekly-active-users",
+      "displayName": "Weekly Active Users (WAU)",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "monthly-active-users",
+      "displayName": "Monthly Active Users (MAU)",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "user-retention-rate",
+      "displayName": "User Retention Rate",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "churn-rate",
+      "displayName": "Churn Rate",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "average-session-duration",
+      "displayName": "Average Session Duration",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "pages-per-session",
+      "displayName": "Pages Per Session",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "bounce-rate",
+      "displayName": "Bounce Rate",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "customer-lifetime-value",
+      "displayName": "Customer Lifetime Value (CLV)",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "net-promoter-score",
+      "displayName": "Net Promoter Score (NPS)",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "conversion-rate",
+      "displayName": "Conversion Rate",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "cost-per-acquisition",
+      "displayName": "Cost Per Acquisition (CPA)",
+      "isPercentageMetric": false
+    },
+    {
+      "id": "return-on-investment",
+      "displayName": "Return on Investment (ROI)",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "engagement-rate",
+      "displayName": "Engagement Rate",
+      "isPercentageMetric": true
+    },
+    {
+      "id": "click-through-rate",
+      "displayName": "Click-Through Rate (CTR)",
+      "isPercentageMetric": true
+    }
+  ]
+}
